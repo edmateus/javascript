@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testado DOM</title>
+    <style>
+        *{
+            background-color: lightblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1 id="dom">Estou vendo como funciona um DOM</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo perspiciatis labore hic nihil natus iste neque commodi eos impedit rerum quo, incidunt adipisci autem. Vero deleniti ipsum atque nesciunt?</P>
+    <P name="importante">Mais um teste</P>
+    <h2>Outro teste importante</h2>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        p1.innerText = 'Está escrito assim: ' + p1.innerText
+        
+        var titulo = window.document.getElementById('dom')
+        titulo.innerHTML = 'oit tudo bem ' + titulo.innerHTML 
+
+       var  para = document.querySelector('[name="importante"]')
+        para.style.color = 'green'
+        para.style.fontSize = '5em'
+    </script>
+</body>
+</html>
